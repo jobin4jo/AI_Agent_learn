@@ -1,4 +1,5 @@
 from google.adk.agents import LlmAgent
+from google.adk.tools import google_search
 
 finance_assistant_agent = LlmAgent(
     name="FinanceAssistant",
@@ -12,7 +13,8 @@ You help users with:
 - Financial planning
 
 Always ensure advice is safe, conservative, and based on sound financial principles.
-"""
+""",
+tools=[google_search]
 )
 
 
